@@ -9,18 +9,19 @@ The Todo App is a simple task management application that allows users to create
 - **Todo Management**:
   - Users can view their todo list.
     - currently hardcoded
-  ![screencapture-probable-eureka-wxqpvgp59w7f55jp-3000-app-github-dev-2025-03-10-01_11_23](https://github.com/user-attachments/assets/cd5c716b-60d3-4949-9591-b186f724318b)
+![screencapture-probable-eureka-wxqpvgp59w7f55jp-3000-app-github-dev-2025-03-10-01_11_23](https://github.com/user-attachments/assets/cd5c716b-60d3-4949-9591-b186f724318b)
   - Users can update (edit or mark as complete) tasks.
     - modal completed, logic needs to be implemented properly
-  ![probable-eureka-wxqpvgp59w7f55jp-3000 app github dev_(desktop)](https://github.com/user-attachments/assets/4a4e4b01-eb02-436f-b27d-74db5b0062ad)
+![probable-eureka-wxqpvgp59w7f55jp-3000 app github dev_(desktop) (2)](https://github.com/user-attachments/assets/73ee889a-11e3-4d1d-9938-7b382fdce73d)
+
 
     - progress bar tracks how many tasks have been marked as complete
-  ![screencapture-probable-eureka-wxqpvgp59w7f55jp-3000-app-github-dev-2025-03-10-01_21_55](https://github.com/user-attachments/assets/55388027-3694-4c39-a572-7aed1d77cc76)
+![screencapture-probable-eureka-wxqpvgp59w7f55jp-3000-app-github-dev-2025-03-10-01_21_55](https://github.com/user-attachments/assets/55388027-3694-4c39-a572-7aed1d77cc76)
 
   - Users can create new todos.
     - modal completed, logic needs to be implemented properly
+![probable-eureka-wxqpvgp59w7f55jp-3000 app github dev_(desktop)](https://github.com/user-attachments/assets/4a70f0b7-07ac-4322-bdbd-34678748dd7b)
 
-  ![probable-eureka-wxqpvgp59w7f55jp-3000 app github dev_(desktop) (1)](https://github.com/user-attachments/assets/556836f1-ac17-48bf-9107-ae781200cfda)
 
 ---
 
