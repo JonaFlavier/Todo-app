@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #00082c;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+header {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+footer {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .card-response {
+    width: 90vw;
+  }
+  .progress-bar-background {
+    width: 90%;
+    background-color: #ededed;
+    border-radius: 10px;
+  }
+  .task-button {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-response {
+    width: 50vw;
+  }
+  .progress-bar-background {
+    width: 95%;
+    background-color: #ededed;
+    border-radius: 10px;
+  }
+  .task-button {
+    width: 95%;
+  }
+}
+
+
+/* 
+task button
+*/
+
+.task-button-default {
+  color: #00082c;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+/* 
+card
+*/
+
+.card-base {
+  color: #00082c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: #bde3ff;
+}
+
+.card-completed {
+  background-color: #aee9be;
+}
+
+/* 
+progress bar
+*/
+
+.progress-bar-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+
+.progress-bar {
+  background-color: #aee9be;
+  color: #00082c;
+  font-weight: bold;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+  transition: width 2s ease-in-out; /* Animate the width change */
+}
+
+input[type=checkbox]
+{
+    cursor: pointer;
+    accent-color: #00082c;   
+    transform: scale(2);
+    margin: 5px;
+}
+
+/* 
+modal
+*/
+
+
+.modal-overlay {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+} 
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* background-color: #fefefe; */
+  padding: 10px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.5s;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+.modal-header {
+  background-color: #00082c;
+  color: #ededed;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.modal-footer {
+  background-color: #00082c;
+  color: #ededed;
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.button {
+  border-radius: 5px;
+  min-width: 100px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal-textarea {
+   resize: horizontal;
+   width: 100%;
+   border-color: #00082c;
+   border-width: 1px;
+   border-radius: 10px;
+   padding: 10px;
+}
+
+.modal-close {
+  font-size: 2em;
+  margin:10px;
+  outline: none; /* Remove default focus outline */
+  cursor: pointer;
+  transition: text-shadow 0.5s ease-in-out; /* Smooth transition for glow */
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 255, 255, 0.7); /* Bigger glow */
+  outline: none; /* Remove default focus outline */
+  cursor: pointer;
+}
+
+/* 
+animations
+*/
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
