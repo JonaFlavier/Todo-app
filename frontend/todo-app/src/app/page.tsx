@@ -24,12 +24,12 @@ const task_dict = {
   4: {
     title: 'add auth functionality using different applications',
     notes: 'added later',
-    completed: true
+    completed: false
   },
   5: {
     title: 'docker',
     notes: 'docker compose all components',
-    completed: true
+    completed: false
   },
 }
 

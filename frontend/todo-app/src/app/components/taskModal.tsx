@@ -40,7 +40,7 @@ const TaskModal = (props: Props) => {
                     value={title}
                     readOnly
                     className='modal-textarea'
-                    style={{fontWeight:'bold', fontSize: '1.5em' }}
+                    style={{fontSize: '1.5em' }}
                 />
                 <span style={{ fontWeight:'bolder',fontSize: '1.5em' }}>Notes</span>
                 <textarea
