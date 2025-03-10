@@ -1,17 +1,24 @@
 import { notStrictEqual } from 'assert';
-import React from 'react'
+import React, { useState } from 'react'
 
 type Props = {
-    task_id: number,
-    title: string,
-    notes: string,
+    // task_id: number,
+    // title: string,
+    // notes: string,
     isOpen: boolean,
-    onClose: (state: boolean, id: string) => void
+    onClose: (state: boolean, task: object|null) => void
     // handleAction: () => void
 }
 
-const TaskModal = (props: Props) => {
-    const {task_id, title, notes, isOpen, onClose} = props;
+const AddTaskModal = (props: Props) => {
+    const {isOpen, onClose} = props;
+
+    const [taskDetails, setTaskDetails] = useState(
+        {
+            title: "",
+            notes: "",
+        }
+    )
 
     if (!isOpen) return null;
 
@@ -19,7 +26,7 @@ const TaskModal = (props: Props) => {
         console.log("Clicked on:", e.target.id); // Logs the clicked element ID
         if(e.target.id == 'modal-area' || e.target.id == 'modal-close') {
             // console.log("Close the modal in here")
-            onClose(false, e.target.id);
+            onClose(false, null);
         }
 
     }
@@ -28,7 +35,7 @@ const TaskModal = (props: Props) => {
     <div id='modal-area'  className='modal-overlay' onClick={handleOverlayClose} >
         <div className='modal' >
             <div className='modal-header'>
-                <h2 style={{fontWeight:'bolder', fontSize: '1.5em' }}>Task Details</h2>
+                <h2 style={{fontWeight:'bolder', fontSize: '1.5em' }}>Add Task Details</h2>
                 <span id='modal-close' className='modal-close' onClick={handleOverlayClose}>&times;</span>
                 
             </div>
@@ -36,23 +43,22 @@ const TaskModal = (props: Props) => {
                 <span style={{fontWeight:'bolder', fontSize: '1.5em' }}>Title</span>
                 <textarea
                     id='title'
-                    value={title}
-                    readOnly
+                    value={taskDetails.title}
                     className='modal-textarea'
                     style={{fontSize: '1.5em' }}
+                    readOnly
                 />
                 <span style={{ fontWeight:'bolder',fontSize: '1.5em' }}>Notes</span>
                 <textarea
                     id='notes'
-                    value={notes}
-                    readOnly
+                    value={taskDetails.notes}
                     className='modal-textarea'
                     style={{fontSize: '1.5em' }}
+                    readOnly
                 />
             </div>
             <div className='modal-footer' >
-                <input className='button'  style={{fontSize: '1.5em', backgroundColor: '#cc0134' }} id='delete' type='button' value='Delete' />
-                <input className='button' style={{fontSize: '1.5em', backgroundColor: '#049966' }} id='save' type='button' value='Save' />
+                <input className='button' style={{fontSize: '1.5em', backgroundColor: '#049966' }} id='save' type='button' value='Submit Task' />
             </div>
         </div>
     </div>
@@ -60,4 +66,4 @@ const TaskModal = (props: Props) => {
   )
 }
 
-export default TaskModal
+export default AddTaskModal

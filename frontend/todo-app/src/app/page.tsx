@@ -3,6 +3,7 @@ import Image from "next/image";
 import Task_card from "./components/taskCard";
 import Progress_bar from "./components/progressBar";
 import { useEffect, useState } from "react";
+import AddTaskModal from "./components/addTaskModal";
 
 // dummy data for tasks
 const task_dict = {
@@ -39,6 +40,7 @@ export default function Home() {
 
   const [progress, setProgress] = useState(0);
   const [update, setUpdate] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     console.log(calcProgress());
@@ -79,8 +81,14 @@ export default function Home() {
     setUpdate(true);
   }
 
+  const handleAddTaskModal = (state: boolean, task: object|null) => {
+    // console.log(`task ${state} need to toggle modal here!!`)
+    console.log(task)
+    if (modalOpen != state){
+      setModalOpen(state);
+    }
+    }
 
-  
 
 
   return (
@@ -109,9 +117,9 @@ export default function Home() {
 
     </main>
     <footer>
-      <button className="task-button-default task-button" style={{backgroundColor: '#ff9932'}} >Add New Task</button>
+      <button className="task-button-default task-button" style={{backgroundColor: '#ff9932'}} onClick={e => setModalOpen(true)} >Add New Task</button>
+    <AddTaskModal  isOpen={modalOpen} onClose={handleAddTaskModal} />
     </footer>
-
     </>
 
 

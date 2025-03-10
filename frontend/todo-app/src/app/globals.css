@@ -200,6 +200,9 @@ modal
 
 .modal-body {
   background-color: #fefefe;
+  border-color: #00082c;
+  border-width: 2px;
+  color:  #00082c;;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
