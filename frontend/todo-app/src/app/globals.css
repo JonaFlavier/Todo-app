@@ -37,6 +37,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
 }
 
 main {
@@ -179,8 +180,6 @@ modal
   position: fixed;
   bottom: 0;
   width: 100%;
-  /* background-color: #fefefe; */
-  padding: 10px;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.5s;
   animation-name: slideIn;
@@ -206,17 +205,17 @@ modal
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px;
+  padding: 20px;
 }
 
 .modal-footer {
   background-color: #00082c;
   color: #ededed;
   display: flex;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px;
+  padding: 10px 0 10px 0;
 }
 
 .button {
