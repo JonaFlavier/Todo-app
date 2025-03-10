@@ -22,6 +22,7 @@ modal completed, logic needs to be implemented properly
 <img src="https://github.com/user-attachments/assets/bbf16667-9374-4ed9-b906-4a16b5a65855" alt="Todo List" width="200" height="auto" />
 <img src="https://github.com/user-attachments/assets/4a70f0b7-07ac-4322-bdbd-34678748dd7b" alt="Create Todo" width="200" height="auto" />
 </div>
+
 ---
 
 ## 3. Features
