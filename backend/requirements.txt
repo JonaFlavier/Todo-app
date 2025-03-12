@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+psycopg2-binary
+sqlalchemy
+alembic
+python-dotenv
+bcrypt
+passlib[bcrypt]
+pyjwt
+httpx
+redis
+aioredis
+authlib
