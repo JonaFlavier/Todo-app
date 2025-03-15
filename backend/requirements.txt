@@ -12,3 +12,4 @@ httpx
 redis
 aioredis
 authlib
+asyncpg
